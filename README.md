@@ -4,8 +4,8 @@ Uses live streamed twitter tweets filtered by your own kwy words, to make sentim
 Store them in local database, and then creates a dashbord with live charts.
 
 ### Availble:
-* Historical scatter chart. With dynamic historical window size.
-* Pie chart, which shows positive/negative partition. Also availble to control historical period.
+* Historical scatter moving average chart. With dynamic historical window size.
+* Pie chart, which shows positive/negative partition by count. Also availble to control historical period.
 * Live table with tweets.
 * Possible to change list of 'key words', in Config.py
 
