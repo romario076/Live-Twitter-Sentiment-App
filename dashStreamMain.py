@@ -247,7 +247,7 @@ def update_graph_scatter(sentiment_term, window):
 
 
             return {'data': [dataScatter, dataVolume],'layout' : go.Layout(
-                                                        title='Live sentiment',
+                                                        title='Live sentiment(moving average)',
                                                         xaxis={'range': [min(X),max(X)], 'showgrid': False},
                                                         #yaxis={'range': [min(Y),max(Y)], 'gridcolor': app_colors['gridcolor']},
                                                         yaxis= {'range':[min(Y2), max(Y2 * 4)], 'title':'Volume', 'side':'right'},
@@ -361,7 +361,7 @@ def updatePieChart(sentiment_term):
                                    line=dict(color=app_colors['background'], width=2)))
 
         return {"data": [trace], 'layout': go.Layout(
-            title='Positive vs Negative',
+            title='Positive vs Negative (Count)',
             font={'color': app_colors['text']},
             plot_bgcolor=app_colors['plotcolor'],
             paper_bgcolor=app_colors['papercolor'],
