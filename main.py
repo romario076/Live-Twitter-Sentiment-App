@@ -39,9 +39,9 @@ def main():
     tweetsProcessing.run()
     print("Twitter connection success!")
 
-    #processThread = Thread(target=thread_second)  # <- note extra ','
-    #processThread.daemon = True
-    #processThread.start()
+    processThread = Thread(target=thread_second)  # <- note extra ','
+    processThread.daemon = True
+    processThread.start()
     print("Create web dash!")
 
 
