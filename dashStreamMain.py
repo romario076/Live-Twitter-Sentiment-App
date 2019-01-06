@@ -345,7 +345,8 @@ def updatePieChart(sentiment_term):
 
         df = pd.read_sql("SELECT count(case when Polarity > 0 then 1 else null end) as Positive, \
                 count(case when Polarity < 0 then 1 else null end) as Negative from \
-                (select Polarity from %s ORDER BY UnixTime DESC limit %s) as a"  % ( RunConfig.tableName, gvalue), conn)
+                (select Polarity from %s where abs(Polarity)>=%s \
+                 ORDER BY UnixTime DESC limit %s) as a"  % ( RunConfig.tableName, PositiveNegativeThreshold, gvalue), conn)
         if len(df)>0:
             values = [round(100*df.Positive.iloc[0]/(df.Positive.iloc[0]+df.Negative.iloc[0]),2),
                       round(100*df.Negative.iloc[0]/(df.Positive.iloc[0]+df.Negative.iloc[0]),2)]
