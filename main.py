@@ -12,7 +12,6 @@ import re
 from threading import Thread, Lock, Event
 from TweetsProcessing import TweetsProcessing
 from Config import RunConfig
-import dashStream
 from subprocess import call
 
 
