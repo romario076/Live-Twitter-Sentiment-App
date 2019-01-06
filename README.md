@@ -1,6 +1,6 @@
 # Live-Twitter-Sentiment-App
 
-Uses live streamed twitter tweets filtered by your own kwy words, to make sentiment analysis to classify on positve and negative tweets. 
+It is live dashboard of streamed twitter tweets, filtered by your own key words with applying sentiment analysis of tweets. Sentiment analysis is for classifying on positve and negative tweets. 
 Store them in local database, and then creates a dashbord with live charts.
 
 ### Availble:
